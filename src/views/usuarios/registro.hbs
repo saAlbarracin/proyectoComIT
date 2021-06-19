@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        Registra una cuenta
+      </div>
+      <div class="card-body">
+        <form action="/usuarios/registro" method="POST">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="nombre"
+              placeholder="Ingresa tu nombre"
+              value="{{nombre}}"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="apellido"
+              placeholder="Ingresa tu apellido"
+              value="{{apellido}}"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="Ingresa tu email"
+              value="{{email}}"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              name="contraseña"
+              placeholder="Ingresa tu contraseña"
+              value="{{contraseña}}"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              name="confirma_contraseña"
+              placeholder="Confirma tu contraseña"
+              value="{{confirma_contraseña}}"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              <input type="text" class="form-control" id="address2" placeholder="Ingresa tu direccion">
+            
+          </div>
+            <div class="form-group">
+            <label for="country" class="form-label">Pais</label>
+              <select class="form-select" id="country" required>
+                <option value="">Escoger...</option>
+                <option>Argentina</option>
+                <option>Brasil</option>
+                <option>Chile</option>
+              </select>
+          </div>
+          <button class="btn btn-primary btn-block">
+              Registrarse
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
