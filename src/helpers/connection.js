@@ -3,7 +3,7 @@ const connection = {};
 
 connection.connectiondb = (crudMongo, table) => {
     mongodb.MongoClient.connect(
-        "mongodb+srv://santiago29:Av4274919@cluster0.ndz4h.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+      "mongodb+srv://usuarioproyecto:Hola123@cluster0.ndz4h.mongodb.net/test",
         {
           useNewUrlParser: true,
           useUnifiedTopology: true,

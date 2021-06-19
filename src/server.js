@@ -52,7 +52,7 @@ app.use(
 
 // Routes
 app.use(require('./routes/index.routes'));  // Aca definimos las rutas, pero que vaya a buscarla a estos archivos
-app.use(require('./routes/operaciones.routes'));
+app.use('/operaciones', require('./routes/operaciones.routes'));
 app.use(require('./routes/users.routes'));
 // Archivos estaticos
 app.use(express.static(path.join(__dirname, 'public'))); // Sirve para que el navegador o cualquier aplicacion pueda acceder facilmente a la carpeta public

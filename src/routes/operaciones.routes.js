@@ -11,18 +11,18 @@ const {
 } = require("../controllers/operaciones.controllers");
 
 // Operaciones
-router.get("/operaciones/home", renderOperaciones);
+router.get("/home", renderOperaciones);
 
-router.post("/operaciones/add", createNewOperacion);
+router.post("/add", createNewOperacion);
 
 module.exports = router;
 
 // Obtener el movimiento de todas las operaciones
-router.get("/operaciones/movimientos", renderOperacionesMovimientos);
+router.get("/movimientos", renderOperacionesMovimientos);
 
 // Editar operaciones
-router.get("/operaciones/edit/:id", renderEditarOperaciones);
-router.put("/operaciones/edit/:id", updateOperacion); // El metodo put para actualizar la operacion
+router.get("/edit/:id", renderEditarOperaciones);
+router.put("/edit/:id", updateOperacion); // El metodo put para actualizar la operacion
 
 // Delete Operacion
-router.delete("/operaciones/delete/:id", deleteOperacion);
+router.delete("/delete/:id", deleteOperacion);

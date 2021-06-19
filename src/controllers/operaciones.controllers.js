@@ -1,31 +1,35 @@
-const { Router } = require("express");
-const { session } = require("passport");
+const mongodb = require('mongodb');
 const { connectiondb } = require("../helpers/connection");
-const router = Router();
 
 const operacionesCtrl = {};
 
-operacionesCtrl.renderOperaciones =  (req, res) => {
-  const findUser = (collecion, client) => {
-    collecion.findOne({ "usuario": 'pepe@pepe.com', "contrasena": 'pepe' }, function(err, datos) {
+operacionesCtrl.renderOperaciones = (req, res) => {
+
+  const usuarioConectado = req.session.usuario;
+
+  const getUser = (coleccion, client) => {
+    coleccion.findOne({ _id: mongodb.ObjectID(usuarioConectado._id)}, function (err, usuario) {
       client.close();
-      if (err || !datos) {
-        console.log("Hubo un error al consultar:", err, '---', datos);
-        res.render("usuarios/iniciarsesion");
-      } else {
-        res.render("operaciones/nueva-operacion", { user: datos});
+      if (err) {
+        console.log("Hubo un error al consultar:", err);
+        res.send("Hubo un error");
+        return;
       }
+      // console.log('usuario', resultado);
+      res.render("operaciones/nueva-operacion", { user: usuario });
     });
   }
-  connectiondb(findUser, 'usuarios');
+  connectiondb(getUser, 'usuarios');
+
 };
 
 operacionesCtrl.createNewOperacion = (req, res) => {
-  
+  const usuarioConectado = req.session.usuario;
+
   const updateUser = (collecion, client) => {
-    collecion.updateOne({ usuario: 'pepe@pepe.com'}, {
-      $set: {
-        saldo: req.body.monto
+    collecion.updateOne({ _id: mongodb.ObjectID(usuarioConectado._id) }, {
+      $inc: {
+        saldo: parseInt(req.body.monto)
       }
     }, function (err, resultado) {
       client.close();
@@ -34,8 +38,7 @@ operacionesCtrl.createNewOperacion = (req, res) => {
         res.send("Hubo un error");
         return;
       }
-      console.log('Resultado', resultado);
-      //res.send('ok');
+      // console.log('Resultado', resultado);
       res.redirect("/operaciones/home");
     });
   }
