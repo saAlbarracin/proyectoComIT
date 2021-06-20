@@ -1,7 +1,12 @@
 body {
-    background: #593196
+    background: rgb(49,49,150);
+    background: linear-gradient(90deg, rgba(49,49,150,1) 0%, rgba(73,3,252,1) 38%, rgba(98,0,255,1) 90%);
 }
-
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.0rem;
+    color: black;
+}
 .img-fluid {
     margin-right: 30px;
 }
@@ -13,3 +18,4 @@ body {
 .fas {
     font-size: 40px;
 }
+

@@ -8,7 +8,7 @@ operacionesCtrl.renderOperaciones = (req, res) => {
   const usuarioConectado = req.session.usuario;
 
   const getUser = (coleccion, client) => {
-    coleccion.findOne({ _id: mongodb.ObjectID(usuarioConectado._id)}, function (err, usuario) {
+    coleccion.findOne({ _id:mongodb.ObjectID(usuarioConectado._id)}, function (err, usuario) {
       client.close();
       if (err) {
         console.log("Hubo un error al consultar:", err);
@@ -45,7 +45,57 @@ operacionesCtrl.createNewOperacion = (req, res) => {
   connectiondb(updateUser, 'usuarios');
 };
 
-operacionesCtrl.renderOperacionesMovimientos = (req, res) => {
+operacionesCtrl.newTransfer = (req, res) => {
+  console.log(req.body);
+  const usuarioOrigen = req.session.usuario;
+  let usuarioDestino = null
+  const obtenerUsuarioDestino = async (collecion, client) => {
+    collecion.findOne({ 'aliasCuenta': req.body.usuarioDestino }, function (err, resultado) {
+      client.close();
+      if (err) {
+        console.log("Hubo un error al consultar:", err);
+        res.send("Hubo un error");
+        return;
+      }
+      console.log('Resultado', resultado);
+      usuarioDestino = resultado
+    });
+  }
+  connectiondb(obtenerUsuarioDestino, 'usuarios');
+console.log(usuarioDestino);
+const updateUserDestino = (collecion, client) => {
+    collecion.updateOne({ _id: mongodb.ObjectID(usuarioDestino._id) }, {
+      $inc: {
+        saldo: parseInt(req.body.monto)
+      }
+    }, function (err, resultado) {
+      client.close();
+      if (err) {
+        console.log("Hubo un error al consultar:", err);
+        res.send("Hubo un error");
+        return;
+      }
+    });
+  }
+  connectiondb(updateUserDestino, 'usuarios');
+
+const updateUserOrigen = (collecion, client) => {
+    collecion.updateOne({ _id: mongodb.ObjectID(usuarioOrigen._id) }, {
+      $desc: {
+        saldo: parseInt(req.body.monto)
+      }
+    }, function (err, resultado) {
+      client.close();
+      if (err) {
+        console.log("Hubo un error al consultar:", err);
+        res.send("Hubo un error");
+        return;
+      }
+    });
+  }
+  connectiondb(updateUserOrigen, 'usuarios');
+
+
   res.send("render movimientos");
 };
 
@@ -55,6 +105,7 @@ operacionesCtrl.renderEditarOperaciones = (req, res) => {
 
 operacionesCtrl.updateOperacion = (req, res) => {
   res.send("update operacion");
+  
 };
 
 operacionesCtrl.deleteOperacion = (req, res) => {

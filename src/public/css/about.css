@@ -1,0 +1,14 @@
+.container4 {
+    max-width: 900px;
+  }
+  
+  .credits a {
+    text-decoration: none;
+    color: black;
+  }
+  #main-image {
+    width: 400px;
+  }
+  img {
+    width: 300px;
+  }

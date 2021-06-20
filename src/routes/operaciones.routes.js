@@ -4,10 +4,10 @@ const router = Router();
 const {
   renderOperaciones,
   createNewOperacion,
-  renderOperacionesMovimientos,
   renderEditarOperaciones,
   updateOperacion,
   deleteOperacion,
+  newTransfer,
 } = require("../controllers/operaciones.controllers");
 
 // Operaciones
@@ -18,7 +18,7 @@ router.post("/add", createNewOperacion);
 module.exports = router;
 
 // Obtener el movimiento de todas las operaciones
-router.get("/movimientos", renderOperacionesMovimientos);
+router.post("/transferencia", newTransfer);
 
 // Editar operaciones
 router.get("/edit/:id", renderEditarOperaciones);
