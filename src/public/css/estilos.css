@@ -13,7 +13,7 @@ body{
 }
 
 .hero{
-    background-image: linear-gradient(120deg, black 0%, rgba(85, 27, 35, 0.692) 100%), url("../img/header.jpg");
+    background-image: linear-gradient(90deg, rgba(49,49,150,1) 0%, rgba(73,3,252,1) 38%, rgba(98,0,255,1) 90%), url("../img/header.jpg");
     width: 100%;
     height: 650px;
     background-repeat: no-repeat;
@@ -46,9 +46,9 @@ body{
     display: inline-block;
     text-decoration: none;
     padding: 12px 15px;
-    background: #a18cd1;
+    background: #FF94CC;
     border-radius: 8px;
-    color: #fff;
+    color: #FF94CC;
 }
 
 .svg-hero{
@@ -111,17 +111,17 @@ body{
 .cta{
     display: inline-block;
     text-decoration: none;
-    background-image: linear-gradient(45deg, black 0%, black 99%, black 100%);
+    background-image: radial-gradient(circle, rgba(255,148,204,1) 0%, rgba(255,148,204,1) 45%, rgba(255,148,204,1) 100%);
     padding: 12px 15px;
     border-radius: 8px;
-    color: #fff;
+    color: #FF94CC;
 }
 
 /* Info */
 
 .info{
-    background: #f5576c;
-    color: #fff;
+    background: linear-gradient(90deg, rgba(49,49,150,1) 0%, rgba(73,3,252,1) 38%, rgba(98,0,255,1) 90%);;
+    color: #FF94CC;
 }
 
 
@@ -143,6 +143,7 @@ body{
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
     transform: scale(1);
     transition: transform 0.6s;
+    border-radius: 38px;
     
 }
 
@@ -154,7 +155,7 @@ body{
 
 .card i{
     margin: 30px 0 20px 0;
-    color: black;
+    color: #FF94CC;
     font-size: 50px;
 }
 
@@ -167,7 +168,7 @@ body{
 /* galeria */
 
 .galeria{
-    background: #f2f2f2;
+    background: #FF94CC;
 }
 
 .galeria-cont{
@@ -209,7 +210,7 @@ body{
 /* footer */
 
 footer{
-    background: #f5576c;
+    background: #FF94CC;
     color: #fff;
 }
 
@@ -222,9 +223,9 @@ footer{
 .input{
     background: transparent;
     border: 0;
-    color: #fff;
+    color: #FF94CC;
     outline: none;
-    border: 1px  solid #fff;
+    border: 1px  solid #FF94CC;
     padding: 20px 10px;
 }
 

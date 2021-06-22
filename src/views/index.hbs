@@ -1,94 +1,186 @@
-    <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.83.1">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/masonry/">
-    <link rel="stylesheet" href="css/mampostery.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="typewriter-effect">
-  <div class="text" id="typewriter-text"></div>
-</div>
-
- <div class="typewriter2-effect">
-  <div class="text2" id="typewriter-text2"></div>
-</div>
-<div class="container3">
-      <div class="row">
-          <div class="col-12">
-            <div class="card-columns">
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image10.jpg" alt="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>New Age - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Mashead header-->
+        <main class="container-fluid">
+        <header class="masthead">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Mashead text and app badges-->
+                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                            <h1 class="display-1 lh-1 mb-3">Tu mundo financiero mucho mas simple.</h1>
+                            <p class="lead fw-normal text-muted mb-5">Descarga nuestra aplicación y sumate a la aventura financiera.</p>
+                            <div class="d-flex flex-column flex-lg-row align-items-center">
+                                <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
+                                <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Masthead device mockup feature-->
+                        <div class="masthead-device-mockup">
+                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                        <stop class="gradient-start-color" offset="0%"></stop>
+                                        <stop class="gradient-end-color" offset="100%"></stop>
+                                    </linearGradient>
+                                </defs>
+                                
+                            ><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                          
+                            ><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg>
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black">
+                                        <!-- PUT CONTENTS HERE:-->
+                                        <!-- * * This can be a video, image, or just about anything else.-->
+                                        <!-- * * Set the max width of your media to 100% and the height to-->
+                                        <!-- * * 100% like the demo example below.-->
+                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </header>
+        <!-- Quote/testimonial aside-->
+        <aside class="text-center bg-gradient-primary-to-secondary">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="h2 fs-1 text-white mb-4">"Somos tu banco en una app, queremos acompañarte en cada transacción, para ello desarrollamos una interfaz super intuitiva y facil de utilizar. Te esperamos."</div>
+                        <img src="/img/homebanking.png" alt="..." style="height: 10rem" style="width: 3rem" />
+                    </div>
+                </div>
             </div>
-            
-
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image2.jpg" alt="">
+        </aside>
+        <!-- App features section-->
+        <section id="features">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                        <div class="container-fluid px-5">
+                            <div class="row gx-5">
+                                <div class="col-md-6 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h3 class="font-alt">Multiplataforma</h3>
+                                        <p class="text-muted mb-0">Podes utilizar nuestra aplicación tanto en Android, IOS, como MUI.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-5">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                          
+                                        <i class="fas fa-random"></i>
+                                        <h3 class="font-alt">Transferi tu Dinero</h3>
+                                        <p class="text-muted mb-0">Tan solo, elegí un usuario de destino y elegí la cantidad deseada</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-5 mb-md-0">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <i class="fas fa-wallet"></i>
+                                        <h3 class="font-alt">Carga tu Billetera</h3>
+                                        <p class="text-muted mb-0">Selecciona la cantidad y podrás comenzar con tus operaciones</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Feature item-->
+                                    <div class="text-center">
+                                        <i class="fas fa-check-square"></i>
+                                        <h3 class="font-alt">Transacción satisfactoria</h3>
+                                        <p class="text-muted mb-0">Ahora disfruta de los beneficios de haber completado con exito tu operación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-0">
+                        <!-- Features section device mockup-->
+                        <div class="features-device-mockup">
+                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    
+                                </defs>
+                             </svg
+                            >
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg
+                            ><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg>
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black">
+                                        <!-- PUT CONTENTS HERE:-->
+                                        <!-- * * This can be a video, image, or just about anything else.-->
+                                        <!-- * * Set the max width of your media to 100% and the height to-->
+                                        <!-- * * 100% like the demo example below.-->
+                                        <video muted="muted" autoplay="" loop="" style="max-width: 100%; height: 100%"><source src="assets/img/demo-screen.mp4" type="video/mp4" /></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+        <!-- Basic features section-->
+        
+        <!-- Call to action section-->
+        
+        <!-- App badge section-->
+        <section class="bg-gradient-primary-to-secondary" id="download">
+            <div class="container px-5">
+                <h2 class="text-center text-white font-alt mb-4">Obtene HomeBanking app ahora!</h2>
+                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
+                    <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+                </div>
             </div>
-
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image3.jpg" alt="">
+        </section>
+        <!-- Footer-->
+        <footer class="bg-black text-center py-5">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div class="mb-2">&copy; HomeBanking App 2021. Todos los derechos reservados.</div>
+                  
+                </div>
             </div>
+        </footer>
+      
+                
+                    </div>
+                </div>
             </div>
-
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image11.jpg" alt="">
-            </div>
-            </div>
-
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image5.jpg" alt="">
-            </div>
-            </div>
-
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image6.jpg" alt="">
-            </div>
-            </div>
-
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image7.jpg" alt="">
-            </div>
-            </div>
-
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image8.jpg" alt="">
-            </div>
-            </div>
-            <div class="card-container">
-            <div class="card">
-              <img src="img/image9.jpg" alt="">
-            </div>
-            </div>
-          </div>
-          </div>
         </div>
-      </div>
-    </div>
-
-
-    </div>
-    
-
-    <script src="/js/mampostery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  </body>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        </main>
+    </body>
 </html>
-
-
-
