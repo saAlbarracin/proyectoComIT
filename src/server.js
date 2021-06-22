@@ -46,8 +46,6 @@ app.use(
     })
   );
 
-// Global Variables
-
 
 
 // Routes

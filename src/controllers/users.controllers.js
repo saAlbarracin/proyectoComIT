@@ -1,6 +1,6 @@
 const { connectiondb } = require("../helpers/connection");
 const Usuario = require("../config/passport");
-const expSession = require('express-session');
+const expSession = require("express-session");
 const path = require("path");
 
 const usersCtrl = {};
@@ -10,8 +10,6 @@ usersCtrl.renderFormularioRegistro = (req, res) => {
 };
 
 usersCtrl.registro = (req, res) => {
-
-
   const errors = [];
   const { nombre, apellido, email, contraseña, confirma_contraseña } = req.body;
   if (contraseña !== confirma_contraseña) {
@@ -26,7 +24,7 @@ usersCtrl.registro = (req, res) => {
   }
   if (nombre.length < 4) {
     errors.push({
-      texto: "El nombre debe estar compuesto por lo menos con 4 caracteres."
+      texto: "El nombre debe estar compuesto por lo menos con 4 caracteres.",
     });
   }
   if (errors.length > 0) {
@@ -45,7 +43,7 @@ usersCtrl.registro = (req, res) => {
   //   res.redirect('usuarios/registro');
   // }
   else {
-    const aliasCuenta = nombre.charAt(0) + apellido.slice(0, 3)
+    const aliasCuenta = nombre.charAt(0) + apellido.slice(0, 3);
 
     const nuevoUsuario = {
       usuario: email,
@@ -68,10 +66,9 @@ usersCtrl.registro = (req, res) => {
         //res.send('ok');
         res.redirect("/usuarios/iniciarsesion");
       });
-    }
-    connectiondb(createUser, 'usuarios');
+    };
+    connectiondb(createUser, "usuarios");
   }
-
 };
 
 usersCtrl.renderIniciarSesion = (req, res) => {
@@ -83,20 +80,23 @@ usersCtrl.renderIniciarSesion = (req, res) => {
 usersCtrl.iniciarSesion = (req, res) => {
   const { email, contraseña } = req.body;
   const findUser = (collecion, client) => {
-    collecion.findOne({ "usuario": email, "contrasena": contraseña }, function (err, usuario) {
-      client.close();
-      if (err) {
-        console.log("Hubo un error al consultar la base de datos:", err);
-        res.redirect("/usuarios/iniciarsesion");
-        return;
-      }
+    collecion.findOne(
+      { usuario: email, contrasena: contraseña },
+      function (err, usuario) {
+        client.close();
+        if (err) {
+          console.log("Hubo un error al consultar la base de datos:", err);
+          res.redirect("/usuarios/iniciarsesion");
+          return;
+        }
 
-      console.log('usuario', usuario);
-      req.session.usuario = usuario;
-      res.redirect("/operaciones/home");
-    });
-  }
-  connectiondb(findUser, 'usuarios');
+        console.log("usuario", usuario);
+        req.session.usuario = usuario;
+        res.redirect("/operaciones/home");
+      }
+    );
+  };
+  connectiondb(findUser, "usuarios");
 };
 
 usersCtrl.logout = (req, res) => {
