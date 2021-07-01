@@ -37,9 +37,8 @@ npm run start
 ## Author
 
 👤 **Santiago Albarracin**
-# Github: [@santiagoalbarracin](https://github.com/saAlbarracin)
-# LinkedIn: [@santiagoalbarracin](https://www.linkedin.com/in/santiago-albarracin-49ab2a1b4/)
-
+<div align="center"><a href="https://www.linkedin.com/in/santiago-albarracin-49ab2a1b4/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+<a href="mailto:albarracinsantiago24@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 
 
 ## Show your support
