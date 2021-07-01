@@ -8,7 +8,9 @@
 
 > Bienvenidos, esta aplicación fue realizada como Proyecto Final para ComunidadIT. En HomeBankingApp podrás crear una cuenta, cumpliendo con todos los pasos para su registro, como nombre, apellido, contraseña, un correo (que te servirá como nombre de usuario) y también podrás elegir tu país de residencia. Una vez logueado, podrás realizar algunas operaciones financieras, como ingresar dinero, transferir dinero, y todo esto se vera reflejado en la parte inferior, "Ultimos Movimientos". Si ingresaste con tu cuenta, cargaste dinero, la aplicación te considerara al momento de "Transferir" Usuario de Origen. Cuando te creas tu cuenta, se te generara un "Alías" :smirk: que sirve para identificar tu cuenta en ves de utilizar un CBU o CVU. Al momento de la transferencia, tienes que ingresar ademas del monto, un "Alías" que va a ser considerado Usuario Destino.
 
-<img  src="/img/loginhomebanking.png" />
+### Iniciar Sesión
+![homebankingapp](https://user-images.githubusercontent.com/82913640/124179516-56689000-da89-11eb-9a4a-0656908c57ea.jpg)
+
 
 ## Install
 
